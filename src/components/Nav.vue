@@ -1,17 +1,5 @@
 <template>
-  <div
-    class="
-      flex
-      h-auto
-      w-full
-      justify-between
-      bg-gray-50
-      px-6
-      pb-7
-      pt-5
-      shadow-innertop
-    "
-  >
+  <div class="flex h-auto w-full justify-between bg-gray-50 px-6 pb-7 pt-5 shadow-innertop">
     <home class="fill-blue-350" />
     <check class="fill-gray-750" />
     <reward class="fill-gray-750" />
