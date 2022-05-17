@@ -5,15 +5,39 @@ module.exports = {
   ],
   theme: {
     extend: {
-      "colors": {
-        // Ici vos couleurs exportées de Figma
+      boxShadow: {
+        'innertop': 'inset 0px 2px 20px rgba(0, 0, 0, 0.10)'
       },
-      "fontFamily": {
-        // Ici vos familles de polices exportées de Figma
-        // Ne pas oublier de les charger dans '/index.html' !
+      colors: {
+
+        "yellow": {
+          '350': '#FFE000',
+        },
+
+        "lime": {
+          '450': '#0BF40B',
+        },
+
+        "gray": {
+          '450': '#797979',
+          '750': '#333333',
+        },
+
+        "blue": {
+          '350': '#41AFFF',
+          'gradient-dark': '#4176FF',
+          'gradient-medium': '#4198FF',
+          'gradient-light': '#41AFFF',
+        },
+
+        "pink": {
+          '350': '#F9A8D4',
+        }
+      },
+      fontFamily: {
+        "outfit": "Outfit, sans-serif",
       },
     },
-
   },
   plugins: [],
 }
