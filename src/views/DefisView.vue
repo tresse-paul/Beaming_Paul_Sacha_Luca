@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5 grid grid-flow-row gap-5 px-4">
     <div>
-      <h2 class="weight text-3xl font-bold">Défis terminés, félicitation !</h2>
+      <h2 class="text-3xl font-bold">Défis terminés, félicitation !</h2>
     </div>
     <div class="flex flex-col gap-5">
       <div class="flex flex-grow-0 items-center gap-5">

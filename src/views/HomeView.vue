@@ -3,7 +3,7 @@
     <!-- Block Défi en cours -->
     <div class="mt-5 flex flex-col gap-5 px-4">
       <div class="flex items-baseline justify-between">
-        <h2 class="weight text-3xl font-bold">Défis en cours</h2>
+        <h2 class="text-3xl font-bold">Défis en cours</h2>
         <plus class="flex-none" />
       </div>
       <div class="flex flex-col gap-5">
