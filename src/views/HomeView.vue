@@ -4,7 +4,7 @@
   </div>
   <div class="grid grid-flow-row gap-12">
     <!-- Block Défi en cours -->
-    <div class="flex flex-col gap-5 px-4 pt-5">
+    <div class="mt-5 flex flex-col gap-5 px-4">
       <div class="flex items-baseline justify-between">
         <h2 class="weight text-3xl font-bold">Défis en cours</h2>
         <plus class="flex-none" />
@@ -18,17 +18,17 @@
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
           <p class="flex-grow text-base font-normal">Lire un chapitre de mon livre</p>
-          <check class="h-auto w-4 flex-none fill-gray-300" />
+          <check class="h-auto w-6 flex-none fill-gray-300" />
         </div>
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
           <p class="flex-grow text-base font-normal">Réviser mes cours</p>
-          <check class="h-auto w-4 flex-none fill-gray-300" />
+          <check class="h-auto w-6 flex-none fill-gray-300" />
         </div>
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
           <p class="flex-grow text-base">Préparer mon repas de ce soir</p>
-          <check class="h-auto w-4 flex-none fill-lime-450" />
+          <check class="h-auto w-6 flex-none fill-lime-450" />
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
       </div>
       <div class="flex flex-grow-0 items-center gap-5">
         <p class="flex-grow text-base font-normal">Regarder le film Fight Club</p>
-        <check class="h-auto w-4 flex-none fill-lime-450" />
+        <check class="h-auto w-6 flex-none fill-lime-450" />
       </div>
     </div>
     <!-- Block Quizz culturel -->
@@ -63,10 +63,9 @@ import plus from "../components/icons/plus.vue";
 import check from "../components/icons/check.vue";
 import minus from "../components/icons/minus.vue";
 import bouton from "../components/bouton.vue";
-import Navigation from "../components/Navigation.vue";
 
 export default {
   name: "App",
-  components: { Header, plus, check, minus, bouton, Navigation },
+  components: { Header, plus, check, minus, bouton },
 };
 </script>
