@@ -9,7 +9,7 @@
         <h2 class="weight text-3xl font-bold">Défis en cours</h2>
         <plus class="flex-none" />
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-5">
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
           <p class="flex-grow text-base font-normal">Faire 30 minutes de sport</p>
