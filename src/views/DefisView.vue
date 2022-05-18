@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="mt-5 grid grid-flow-row gap-5 px-4">
     <div>
       <h2 class="weight text-3xl font-bold">Défis terminés, félicitation !</h2>

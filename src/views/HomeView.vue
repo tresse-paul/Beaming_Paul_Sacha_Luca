@@ -1,7 +1,4 @@
 <template>
-  <div>
-    <Header />
-  </div>
   <div class="grid grid-flow-row gap-12">
     <!-- Block Défi en cours -->
     <div class="mt-5 flex flex-col gap-5 px-4">
