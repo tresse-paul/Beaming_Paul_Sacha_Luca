@@ -1,7 +1,9 @@
 <template>
-  <div class="mt-5 grid grid-flow-row gap-5 px-4">
-    <div>
-      <h2 class="text-3xl font-bold">Ma progression</h2>
+  <div class="grid grid-flow-row gap-5 px-4">
+    <h2 class="text-3xl font-bold">Ma progression</h2>
+    <div class="flex items-center gap-4">
+      <reward class="h-10 w-auto fill-lime-450" />
+      <p class="text-xl font-bold">Niveau 1</p>
     </div>
     <div class="flex justify-center">
       <p class="text-2xl font-bold uppercase">Félicitation</p>
@@ -11,10 +13,6 @@
       <div class="flex items-center justify-center gap-3">
         <p class="text-3xl font-bold">1000</p>
         <logo />
-      </div>
-      <div class="flex items-center gap-4">
-        <reward class="h-10 w-auto fill-lime-450" />
-        <p>Badge de niveau 1</p>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-flow-row gap-12">
     <!-- Block Défi en cours -->
-    <div class="mt-5 flex flex-col gap-5 px-4">
+    <div class="flex flex-col gap-5 px-4">
       <div class="flex items-baseline justify-between">
         <h2 class="text-3xl font-bold">Défis en cours</h2>
         <plus class="flex-none" />
