@@ -13,7 +13,7 @@
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
           <p class="flex-grow text-base font-normal">Faire 30 minutes de sport</p>
-          <check class="fill-lime-450 h-auto w-4 flex-none" />
+          <check class="h-auto w-4 flex-none fill-lime-450" />
         </div>
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
@@ -28,7 +28,7 @@
         <div class="flex flex-grow-0 items-center gap-5">
           <minus class="flex-none" />
           <p class="flex-grow text-base">Préparer mon repas de ce soir</p>
-          <check class="fill-lime-450 h-auto w-4 flex-none" />
+          <check class="h-auto w-4 flex-none fill-lime-450" />
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
       </div>
       <div class="flex flex-grow-0 items-center gap-5">
         <p class="flex-grow text-base font-normal">Regarder le film Fight Club</p>
-        <check class="fill-lime-450 h-auto w-4 flex-none" />
+        <check class="h-auto w-4 flex-none fill-lime-450" />
       </div>
     </div>
     <!-- Block Quizz culturel -->
@@ -56,7 +56,7 @@
       </div>
     </div>
   </div>
-  <Nav class="static bottom-0 mt-10" />
+  <Nav class="relative bottom-0 left-0 mt-10" />
 </template>
 <script >
 import Header from "./components/Header.vue";
