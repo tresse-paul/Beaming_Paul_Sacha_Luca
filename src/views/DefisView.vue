@@ -92,14 +92,23 @@
       </div>
     </div>
   </div>
+  <nav class="mt-10 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
+    <RouterLink to="/"><home class="fill-gray-750" /></RouterLink>
+    <RouterLink to="/defis"><check class="fill-blue-350" /></RouterLink>
+    <RouterLink to="/progression"><reward class="fill-gray-750" /></RouterLink>
+    <RouterLink to="/user"><user class="fill-gray-750" /></RouterLink>
+  </nav>
 </template>
 
 <script >
 import Header from "../components/Header.vue";
 import check from "../components/icons/check.vue";
+import home from "../components/icons/home.vue";
+import reward from "../components/icons/reward.vue";
+import user from "../components/icons/user.vue";
 
 export default {
   name: "App",
-  components: { Header, check },
+  components: { Header, check, home, reward, user },
 };
 </script>
