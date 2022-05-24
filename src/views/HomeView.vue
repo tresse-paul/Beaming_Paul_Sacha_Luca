@@ -49,7 +49,7 @@
         <p class="flex-grow text-base font-normal">Répondez correctement à notre quizz culture et obtenez des Beamings.</p>
       </div>
       <div class="flex justify-center">
-        <a href="#"><bouton>Commencer</bouton></a>
+        <a href="#"><bouton principal>Commencer</bouton></a>
       </div>
     </div>
   </div>
