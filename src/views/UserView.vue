@@ -6,8 +6,8 @@
         <p class="text-2xl font-bold">Paul Tresse</p>
       </div>
       <div class="flex flex-col items-center gap-4">
-        <bouton principal>Modifier</bouton>
-        <bouton>Déconexion</bouton>
+        <bouton>Paramètres</bouton>
+        <boutonWarning>Déconexion</boutonWarning>
       </div>
     </div>
   </main>
@@ -26,9 +26,13 @@ import check from "../components/icons/check.vue";
 import home from "../components/icons/home.vue";
 import user from "../components/icons/user.vue";
 import bouton from "../components/bouton.vue";
+import boutonWarning from "../components/boutonWarning.vue";
 
 export default {
   name: "App",
-  components: { logo, reward, home, user, check, bouton },
+  props: {
+    bgcolor: String,
+  },
+  components: { logo, reward, home, user, check, bouton, boutonWarning },
 };
 </script>

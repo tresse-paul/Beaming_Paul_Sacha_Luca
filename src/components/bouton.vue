@@ -20,6 +20,7 @@ export default {
     principal: {
       type: Boolean,
       default: false,
+      bgcolor: String,
     },
   },
 };
