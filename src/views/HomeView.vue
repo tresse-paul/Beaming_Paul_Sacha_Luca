@@ -49,7 +49,7 @@
         <p class="flex-grow text-base font-normal">Répondez correctement à notre quizz culture et obtenez des Beamings.</p>
       </div>
       <div class="flex justify-center">
-        <RouterLink to="/">
+        <RouterLink to="/quizz">
           <bouton principal>Commencer</bouton>
         </RouterLink>
       </div>

@@ -4,6 +4,7 @@ import DefisView from '../views/DefisView.vue'
 import ProgressionView from '../views/ProgressionView.vue'
 import UserView from '../views/UserView.vue'
 import LegaleView from '../views/LegaleView.vue'
+import QuizzView from '../views/QuizzView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: '/progression', name: 'Progression', component: ProgressionView },
     { path: '/user', name: 'User', component: UserView },
     { path: '/legale', name: 'Legale', component: LegaleView },
+    { path: '/quizz', name: 'Quizz', component: QuizzView },
     // ici les autre routes
   ]
 })
