@@ -1,10 +1,17 @@
 <template>
-  <div class="grid grid-flow-row gap-12">
+  <div class="grid grid-flow-row gap-12 px-4">
     <!-- Block Défi en cours -->
-    <div class="flex flex-col gap-5 px-4">
+    <div class="flex flex-col gap-5">
       <div class="flex items-baseline justify-between">
         <h2 class="text-3xl font-bold">Défis en cours</h2>
-        <plus class="flex-none" />
+        <RouterLink to="/CreateDefi">
+          <plus class="flex-none" />
+        </RouterLink>
+      </div>
+      <div class="relative flex flex-col gap-2">
+        <span class="flex h-2 w-full flex-auto rounded-full bg-gray-200"></span>
+        <span class="absolute top-0 left-0 flex h-2 w-2/4 flex-initial rounded-full bg-lime-450"></span>
+        <p class="flex justify-center text-xs">50 %</p>
       </div>
       <div class="flex flex-col gap-5">
         <div class="flex flex-grow-0 items-center gap-5">
@@ -30,10 +37,9 @@
       </div>
     </div>
     <!-- Block Défi bonus -->
-    <div class="flex flex-col gap-5 px-4 pt-5">
+    <div class="flex flex-col gap-5 pt-5">
       <div class="flex flex-wrap items-baseline justify-between gap-3">
         <h2 class="weight text-3xl font-bold">Défis bonus</h2>
-        <p class="text-xl">2j 5h 34min 4sec</p>
       </div>
       <div class="flex flex-grow-0 items-center gap-5">
         <p class="flex-grow text-base font-normal">Regarder le film Fight Club</p>
@@ -41,7 +47,7 @@
       </div>
     </div>
     <!-- Block Quizz culturel -->
-    <div class="flex flex-col gap-5 px-4 pt-5">
+    <div class="flex flex-col gap-5 pt-5">
       <div class="flex items-baseline justify-between">
         <h2 class="weight text-3xl font-bold">Défis bonus</h2>
       </div>

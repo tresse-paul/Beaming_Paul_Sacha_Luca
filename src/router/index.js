@@ -6,6 +6,9 @@ import UserView from '../views/UserView.vue'
 import LegaleView from '../views/LegaleView.vue'
 import QuizzView from '../views/QuizzView.vue'
 
+import CreateDefi from '../views/defis/CreateView.vue'
+import ListeDefi from '../views/defis/ListeView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,6 +18,9 @@ const router = createRouter({
     { path: '/user', name: 'User', component: UserView },
     { path: '/legale', name: 'Legale', component: LegaleView },
     { path: '/quizz', name: 'Quizz', component: QuizzView },
+
+    { path: '/defis', name: 'ListeDefi', component: ListeDefi },
+    { path: '/createDefi', name: 'CreateDefi', component: CreateDefi },
     // ici les autre routes
   ]
 })
