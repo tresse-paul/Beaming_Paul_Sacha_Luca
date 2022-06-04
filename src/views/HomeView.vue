@@ -1,6 +1,6 @@
 <template>
   <HeaderSite />
-  <div class="flex flex-col gap-16 px-4">
+  <div class="flex flex-col gap-28 px-4">
     <div class="bg- mt-24 flex flex-col gap-7">
       <img class="absolute -top-24 -z-10" src="/src/assets/world_emoticon.png" alt="Vague d'émoji heureux et souriant" />
       <h1 class="text-center font-outfit text-3xl font-bold">Devenez la meilleure version de vous-même</h1>
@@ -12,7 +12,7 @@
         <bouton principal>Commencer gratuitement</bouton>
       </div>
     </div>
-    <div class="flex flex-col items-center gap-10">
+    <div class="relative -z-20 flex flex-col items-center gap-7">
       <h2 class="text-center text-2xl font-bold">
         <span class="inline h-1/2 w-auto bg-yellow-350">Épanouissez-vous</span> pleinement, car votre bonheur nous importe
       </h2>
@@ -33,6 +33,7 @@
         </div>
         <p>Vous n’êtes pas seul(e). Beaming vous accompagne tous les jours, n’importe où et n’importe quand. Ne baissez pas les bras !</p>
       </div>
+      <img class="absolute bottom-32 -z-10 scale-125" src="/src/assets/Serpentin_3D.webp" alt="Serpentin 3D traversant l'écran" />
     </div>
   </div>
 </template>
