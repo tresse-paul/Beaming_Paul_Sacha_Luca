@@ -1,5 +1,5 @@
 <template>
-  <main class="grid grid-flow-row gap-5 px-4">
+  <main class="static grid grid-flow-row gap-5 overflow-y-auto px-4 pt-5 pb-28">
     <h2 class="text-3xl font-bold">Quizz culture</h2>
     <p>Une de ces affiramations est vraie, laquelle ? À la fin du film Fight Club...</p>
     <div class="mt-5 flex flex-col justify-center gap-10">
@@ -22,9 +22,13 @@
         <input type="checkbox" class="flex-none rounded-full border-0 text-lime-450" />
       </div>
     </div>
-    <RouterLink class="mt-5 flex justify-center" to="/"><bouton>Retour</bouton></RouterLink>
+    <div class="flex justify-center">
+      <RouterLink to="/">
+        <bouton>Retour</bouton>
+      </RouterLink>
+    </div>
   </main>
-  <nav class="mt-10 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
+  <nav class="fixed bottom-0 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
     <RouterLink to="/"><home class="fill-blue-350" /></RouterLink>
     <RouterLink to="/defis"><check class="fill-gray-750" /></RouterLink>
     <RouterLink to="/progression"><reward class="fill-gray-750" /></RouterLink>

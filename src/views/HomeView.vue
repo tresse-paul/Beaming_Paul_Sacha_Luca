@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-flow-row gap-12 px-4">
+  <div class="static grid grid-flow-row gap-12 overflow-y-auto px-4 pt-5 pb-28">
     <!-- Block Défi en cours -->
     <div class="flex flex-col gap-5">
       <div class="flex items-baseline justify-between">
@@ -61,7 +61,7 @@
       </div>
     </div>
   </div>
-  <nav class="mt-10 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
+  <nav class="fixed bottom-0 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
     <RouterLink to="/"><home class="fill-blue-350" /></RouterLink>
     <RouterLink to="/defis"><check class="fill-gray-750" /></RouterLink>
     <RouterLink to="/progression"><reward class="fill-gray-750" /></RouterLink>

@@ -1,5 +1,5 @@
 <template>
-  <main class="grid grid-flow-row gap-5 px-4">
+  <main class="static grid grid-flow-row gap-5 overflow-y-auto px-4 pt-5 pb-28">
     <h2 class="text-3xl font-bold">Mon profil</h2>
     <div class="flex flex-col items-center gap-10">
       <div class="flex flex-col items-center gap-4">
@@ -11,7 +11,7 @@
       </div>
     </div>
   </main>
-  <nav class="mt-10 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
+  <nav class="fixed bottom-0 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
     <RouterLink to="/"><home class="fill-gray-750" /></RouterLink>
     <RouterLink to="/defis"><check class="fill-gray-750" /></RouterLink>
     <RouterLink to="/progression"><reward class="fill-gray-750" /></RouterLink>
