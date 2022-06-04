@@ -13,7 +13,9 @@
       </div>
     </div>
     <div class="flex flex-col items-center gap-10">
-      <h2 class="text-center text-2xl font-bold">Épanouissez-vous pleinement, car votre bonheur nous importe</h2>
+      <h2 class="text-center text-2xl font-bold">
+        <span class="inline h-1/2 w-auto bg-yellow-350">Épanouissez-vous</span> pleinement, car votre bonheur nous importe
+      </h2>
       <div class="flex flex-col gap-4">
         <h3 class="text-xl font-bold">Des objectifs quotidiens pour garder le cap</h3>
         <div class="flex justify-center">
