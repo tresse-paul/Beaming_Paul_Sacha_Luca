@@ -9,7 +9,7 @@
         l’épanouissement, à votre rythme.
       </p>
       <div class="flex">
-        <bouton principal>Commencer gratuitement</bouton>
+        <bouton principal class="uppercase">Commencer gratuitement</bouton>
       </div>
     </div>
     <div class="relative -z-20 flex flex-col items-center gap-7">
