@@ -35,6 +35,31 @@
       </div>
       <img class="absolute bottom-32 -z-10 scale-125" src="/src/assets/Serpentin_3D.webp" alt="Serpentin 3D traversant l'écran" />
     </div>
+    <div class="flex flex-col items-center gap-7">
+      <h2 class="text-center text-2xl font-bold">
+        Faites de vos <span class="inline h-1/2 w-auto bg-lime-450">objectifs</span> une habitude
+      </h2>
+      <div class="flex flex-col gap-4">
+        <h3 class="text-xl font-bold">Combien de temps ?</h3>
+        <p>
+          Il faut en moyenne 66 jours, pour adopter une nouvelle habitude, mais pas de panique ! Ce résultat varie en fonction de vos
+          objectifs et de votre motivation.
+        </p>
+        <div class="flex justify-center">
+          <img class="h-28 w-28 object-contain" src="/src/assets/Chronometre_3D.webp" alt="Chronomètre en 3D" />
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h3 class="text-xl font-bold">Quelle méthode adopter ?</h3>
+        <p>
+          Dans un premier temps, il est nécessaire d’identifier les raisons du changement, puis d’évaluer sa motivation et de réaliser
+          plusieurs objectifs simples pour atteindre le sommet.
+        </p>
+        <div class="flex justify-center">
+          <img class="h-28 w-28 object-contain" src="/src/assets/Puzzle_3D.webp" alt="Une pièce de puzzle en 3D" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
