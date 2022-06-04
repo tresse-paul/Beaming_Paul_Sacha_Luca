@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 /* Mettre ici les styles "globaux" */
+
+@layer base {
+    html {
+        font-family: Outfit, sans-serif;
+    }
+}

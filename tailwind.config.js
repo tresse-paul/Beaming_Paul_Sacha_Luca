@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./index.html",
@@ -35,7 +37,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        "outfit": "Outfit, sans-serif",
+        "outfit": ["Outfit, sans-serif", defaultTheme.fontFamily.outfit]
       },
     },
   },
