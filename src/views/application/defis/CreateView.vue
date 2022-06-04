@@ -36,8 +36,8 @@ import {
   uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
-import bouton from "../../components/bouton.vue";
-import boutonWarning from "../../components/boutonWarning.vue";
+import bouton from "../../../components/bouton.vue";
+import boutonWarning from "../../../components/boutonWarning.vue";
 
 export default {
   name: "App",
