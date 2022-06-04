@@ -2,7 +2,7 @@
   <HeaderSite />
   <div class="flex flex-col gap-16 px-4">
     <div class="bg- mt-24 flex flex-col gap-7">
-      <img class="absolute -top-24 -z-10" src="/src/assets/world emoticon.png" alt="Vague d'émoji heureux et souriant" />
+      <img class="absolute -top-24 -z-10" src="/src/assets/world_emoticon.png" alt="Vague d'émoji heureux et souriant" />
       <h1 class="text-center font-outfit text-3xl font-bold">Devenez la meilleure version de vous-même</h1>
       <p class="font-outfit">
         Réalisez vos objectifs et surpassez-vous quotidiennement avec <strong>Beaming</strong>. L’application web qui vous offre les clés de
