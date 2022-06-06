@@ -1,27 +1,37 @@
 <template>
   <HeaderSite />
-  <div class="mb-32 flex w-screen items-center gap-52 px-5 xl:px-32">
-    <div class="flex flex-col gap-20">
+  <div class="flex gap-28 px-5 pt-5">
+    <div class="flex w-full flex-col justify-center gap-20">
       <h2 class="text-4xl font-bold">Se connecter</h2>
-      <form @submit.prevent="onCnx" class="flex max-w-lg flex-col gap-8">
-        <div class="font-barlow flex flex-initial flex-col justify-center gap-2">
+      <form @submit.prevent="onCnx" class="flex flex-col gap-8">
+        <div class="font-barlow flex w-full flex-col gap-2">
           <p class="text-xl">Email</p>
           <input
             v-model="user.email"
-            class="h-8 flex-auto rounded-lg bg-gray-100 px-3 focus:ring-red-500"
+            class="h-8 flex-auto rounded-lg border border-gray-300 bg-gray-100 px-3 focus:ring-red-500"
             type="email"
             required
             placeholder="abcd@mail.com"
           />
         </div>
-        <div class="font-barlow flex flex-initial flex-col justify-center gap-2">
+        <div class="font-barlow flex w-full flex-col gap-2">
           <p class="text-xl">Mot de passe</p>
-          <input v-model="user.password" class="h-8 flex-auto rounded-lg bg-gray-100 px-3 focus:ring-red-500" :type="type" required />
+          <input
+            v-model="user.password"
+            class="h-8 flex-auto rounded-lg border border-gray-300 bg-gray-100 px-3 focus:ring-red-500"
+            :type="type"
+            required
+          />
         </div>
         <div role="alert" class="rounded-lg bg-gray-100 p-3 text-center text-sm text-gray-900">{{ message }}</div>
-        <div class="flex justify-between gap-10">
-          <button class="flex-auto rounded-lg py-2 px-4 text-xl" type="submit">Connexion</button>
-          <button class="flex-auto rounded-lg bg-red-500 py-2 px-4 text-xl text-gray-50" @click="onDcnx()">Deconnexion</button>
+        <div class="flex flex-col justify-between gap-7 md:flex md:flex-row">
+          <button type="submit"><bouton principal class="flex w-full flex-1">Connexion</bouton></button>
+          <button
+            class="flex justify-center rounded-full border-2 border-red-500 py-2 px-5 text-xl font-bold text-gray-900"
+            @click="onDcnx()"
+          >
+            Deconnexion
+          </button>
         </div>
       </form>
     </div>
@@ -30,6 +40,7 @@
 
 <script>
 import HeaderSite from "../../components/HeaderSite.vue";
+import bouton from "../../components/bouton.vue";
 
 import {
   getAuth,
@@ -104,6 +115,6 @@ export default {
     },
   },
 
-  components: { HeaderSite },
+  components: { HeaderSite, bouton },
 };
 </script>

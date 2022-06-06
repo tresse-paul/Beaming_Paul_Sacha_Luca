@@ -1,14 +1,14 @@
 <template>
   <HeaderSite />
   <div class="flex flex-col gap-10">
-    <div class="mt-24 flex flex-col gap-7 px-4">
+    <div class="mt-24 flex flex-col gap-7 px-5">
       <img class="absolute -top-24 left-0 -z-10 w-screen" src="/src/assets/world_emoticon.png" alt="Vague d'émoji heureux et souriant" />
       <h1 class="text-center font-outfit text-3xl font-bold">Devenez la meilleure version de vous-même</h1>
       <p class="font-outfit">
         Réalisez vos objectifs et surpassez-vous quotidiennement avec <strong>Beaming</strong>. L’application web qui vous offre les clés de
         l’épanouissement, à votre rythme.
       </p>
-      <div class="flex">
+      <div class="flex justify-center">
         <bouton principal class="uppercase">Commencer gratuitement</bouton>
       </div>
     </div>

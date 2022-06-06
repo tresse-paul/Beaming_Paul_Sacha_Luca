@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex h-auto w-full items-center justify-between border-b border-gray-100 bg-gray-50 px-4 pb-5 pt-5">
+  <nav class="flex items-center justify-between border-b border-gray-100 bg-gray-50 px-4 pb-5 pt-5">
     <RouterLink to="/"><logo /></RouterLink>
     <div @click="toggleNav" class="flex">
       <button type="button" class="flex flex-col gap-1.5">
