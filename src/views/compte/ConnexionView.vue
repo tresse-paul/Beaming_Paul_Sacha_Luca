@@ -5,22 +5,22 @@
       <h2 class="text-4xl font-bold">Se connecter</h2>
       <form @submit.prevent="onCnx" class="flex max-w-lg flex-col gap-8">
         <div class="font-barlow flex flex-initial flex-col justify-center gap-2">
-          <p class="text-xl text-gray-50">Email</p>
+          <p class="text-xl">Email</p>
           <input
             v-model="user.email"
-            class="text-gray-1000 rounded-lg focus:ring-red-500"
+            class="h-8 flex-auto rounded-lg bg-gray-100 px-3 focus:ring-red-500"
             type="email"
             required
             placeholder="abcd@mail.com"
           />
         </div>
         <div class="font-barlow flex flex-initial flex-col justify-center gap-2">
-          <p class="text-xl text-gray-50">Mot de passe</p>
-          <input v-model="user.password" class="text-gray-1000 flex-auto rounded-lg focus:ring-red-500" :type="type" required />
+          <p class="text-xl">Mot de passe</p>
+          <input v-model="user.password" class="h-8 flex-auto rounded-lg bg-gray-100 px-3 focus:ring-red-500" :type="type" required />
         </div>
-        <div role="alert" class="text-gray-1000 bg-red-300 p-3 text-center text-sm">{{ message }}</div>
+        <div role="alert" class="rounded-lg bg-gray-100 p-3 text-center text-sm text-gray-900">{{ message }}</div>
         <div class="flex justify-between gap-10">
-          <button class="text-gray-1000 flex-auto rounded-lg py-2 px-4 text-xl" type="submit">Connexion</button>
+          <button class="flex-auto rounded-lg py-2 px-4 text-xl" type="submit">Connexion</button>
           <button class="flex-auto rounded-lg bg-red-500 py-2 px-4 text-xl text-gray-50" @click="onDcnx()">Deconnexion</button>
         </div>
       </form>
@@ -71,6 +71,7 @@ export default {
           this.user = response.user;
           emitter.emit("connectUser", { user: this.user });
           this.message = "User connecté : " + this.user.email;
+          this.$router.push("/dashboard");
         })
         .catch((error) => {
           console.log("Erreur de connexion", error);
