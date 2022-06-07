@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <HeaderApp />
+  <div class="pt-5 pb-28">
     <form class="grid grid-flow-row gap-12 px-4" @submit.prevent="CreateDefi">
       <h3 class="text-2xl font-bold">Créer un nouveau défi</h3>
       <input type="text" class="h-10 rounded-lg border px-4" placeholder="Faire 30 minutes de sport..." v-model="libele" required />
@@ -15,6 +16,12 @@
       </div>
     </form>
   </div>
+  <nav class="fixed bottom-0 flex h-auto w-full justify-between border-t border-gray-100 bg-gray-50 px-6 pb-7 pt-5">
+    <RouterLink to="/"><home class="fill-blue-350" /></RouterLink>
+    <RouterLink to="/defis"><check class="fill-gray-750" /></RouterLink>
+    <RouterLink to="/progression"><reward class="fill-gray-750" /></RouterLink>
+    <RouterLink to="/user"><user class="fill-gray-750" /></RouterLink>
+  </nav>
 </template>
 
 <script >
@@ -34,10 +41,15 @@ import {
 
 import bouton from "../../../components/bouton.vue";
 import boutonWarning from "../../../components/boutonWarning.vue";
+import HeaderApp from "../../../components/HeaderApp.vue";
+import check from "../../../components/icons/check.vue";
+import home from "../../../components/icons/home.vue";
+import reward from "../../../components/icons/reward.vue";
+import user from "../../../components/icons/user.vue";
 
 export default {
   name: "App",
-  components: { bouton, boutonWarning },
+  components: { bouton, boutonWarning, HeaderApp, check, home, reward, user },
   name: "CreateView",
   data() {
     return {

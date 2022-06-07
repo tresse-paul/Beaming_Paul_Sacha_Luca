@@ -7,7 +7,7 @@
         <p class="text-2xl font-bold">Paul Tresse</p>
       </div>
       <div class="flex flex-col items-center gap-4">
-        <bouton>Paramètres</bouton>
+        <bouton principal>Paramètres</bouton>
         <boutonWarning>Déconexion</boutonWarning>
       </div>
     </div>
