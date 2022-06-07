@@ -20,7 +20,9 @@
             <minus class="flex-none" />
           </button>
           <p class="flex-grow text-base font-normal">{{ defis.libele }}</p>
-          <input type="checkbox" class="h-full w-5 flex-none rounded-full border-0 bg-lime-450" />
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="h-6 w-6 flex-none rounded-full border border-gray-900 text-lime-450 focus:ring-0" />
+          </label>
         </div>
       </div>
     </div>

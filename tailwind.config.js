@@ -1,10 +1,13 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
+
 
 module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  mode: 'jit',
   theme: {
     extend: {
       boxShadow: {
@@ -41,5 +44,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  variants: {},
+  plugins: [require('@tailwindcss/forms')],
 }
