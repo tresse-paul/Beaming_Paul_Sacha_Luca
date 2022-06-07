@@ -14,26 +14,13 @@
         <span class="absolute top-0 left-0 flex h-2 w-2/4 flex-initial rounded-full bg-lime-450"></span>
         <p class="flex justify-center text-xs">50 %</p>
       </div>
-      <div class="flex flex-col gap-5">
+      <div v-for="defis in listeDefis" :key="defis.id" class="flex flex-col gap-5">
         <div class="flex flex-grow-0 items-center gap-5">
-          <minus class="flex-none" />
-          <p class="flex-grow text-base font-normal">Faire 30 minutes de sport</p>
-          <input type="checkbox" class="h-full w-5 flex-none rounded-full border-0 text-lime-450" />
-        </div>
-        <div class="flex flex-grow-0 items-center gap-5">
-          <minus class="flex-none" />
-          <p class="flex-grow text-base font-normal">Lire un chapitre de mon livre</p>
-          <check class="h-auto w-6 flex-none fill-gray-300" />
-        </div>
-        <div class="flex flex-grow-0 items-center gap-5">
-          <minus class="flex-none" />
-          <p class="flex-grow text-base font-normal">Réviser mes cours</p>
-          <check class="h-auto w-6 flex-none fill-gray-300" />
-        </div>
-        <div class="flex flex-grow-0 items-center gap-5">
-          <minus class="flex-none" />
-          <p class="flex-grow text-base">Préparer mon repas de ce soir</p>
-          <check class="h-auto w-6 flex-none fill-lime-450" />
+          <button @click.prevent="deleteDefis(defis)">
+            <minus class="flex-none" />
+          </button>
+          <p class="flex-grow text-base font-normal">{{ defis.libele }}</p>
+          <input type="checkbox" class="h-full w-5 flex-none rounded-full border-0 bg-lime-450" />
         </div>
       </div>
     </div>
@@ -69,7 +56,21 @@
     <RouterLink to="/user"><user class="fill-gray-750" /></RouterLink>
   </nav>
 </template>
+
 <script >
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  doc, // Obtenir un document par son id
+  getDocs, // Obtenir la liste des documents d'une collection
+  addDoc, // Ajouter un document à une collection
+  updateDoc, // Mettre à jour un document dans une collection
+  deleteDoc, // Supprimer un document d'une collection
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
 import HeaderApp from "../../components/HeaderApp.vue";
 import plus from "../../components/icons/plus.vue";
 import check from "../../components/icons/check.vue";
@@ -82,5 +83,37 @@ import user from "../../components/icons/user.vue";
 export default {
   name: "App",
   components: { HeaderApp, plus, check, minus, bouton, home, reward, user },
+
+  data() {
+    return {
+      defis: {
+        libele: null,
+      },
+      listeDefis: [],
+    };
+  },
+
+  mounted() {
+    this.getDefis();
+  },
+
+  methods: {
+    async getDefis() {
+      const firestore = getFirestore();
+      const dbDefis = collection(firestore, "defis");
+      const query = await onSnapshot(dbDefis, (snapshot) => {
+        this.listeDefis = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      });
+    },
+    async deleteDefis(defis) {
+      //Obtenir Firestore
+      const firestore = getFirestore();
+      //Base de données (collection) document pays
+      //Reference du pays à supprimer
+      const docRef = doc(firestore, "defis", defis.id);
+      //Suppresion du pays référencé
+      await deleteDoc(docRef);
+    },
+  },
 };
 </script>

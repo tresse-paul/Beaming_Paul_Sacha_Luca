@@ -13,7 +13,6 @@ import QuizzView from '../views/application/QuizzView.vue'
 import ConnexionView from '../views/compte/ConnexionView.vue'
 
 import CreateDefi from '../views/application/defis/CreateView.vue'
-import ListeDefi from '../views/application/defis/ListeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,8 +37,6 @@ const router = createRouter({
     { path: '/quizz', name: 'Quizz', component: QuizzView, beforeEnter: guard },
 
     //Les vues de création des défis
-    //Liste des défis
-    { path: '/defis', name: 'ListeDefi', component: ListeDefi, beforeEnter: guard },
     //Page de création d'un défi
     { path: '/createDefi', name: 'CreateDefi', component: CreateDefi, beforeEnter: guard },
 

@@ -2,10 +2,14 @@
   <div>
     <form class="grid grid-flow-row gap-12 px-4" @submit.prevent="CreateDefi">
       <h3 class="text-2xl font-bold">Créer un nouveau défi</h3>
-      <input class="h-10 rounded-lg border px-4" placeholder="Faire 30 minutes de sport..." v-model="defi.libele" />
+      <input type="text" class="h-10 rounded-lg border px-4" placeholder="Faire 30 minutes de sport..." v-model="libele" required />
       <div class="flex flex-wrap content-center justify-center gap-10">
-        <bouton type="submit" class="w-52 flex-initial" principal>Ajouter</bouton>
-        <RouterLink to="/">
+        <button type="button" @click="createDefis()" title="Création">
+          <RouterLink to="/dashboard">
+            <bouton class="w-52 flex-initial" principal>Ajouter</bouton>
+          </RouterLink>
+        </button>
+        <RouterLink to="/dashboard">
           <boutonWarning class="w-52 flex-initial">Retour</boutonWarning>
         </RouterLink>
       </div>
@@ -28,14 +32,6 @@ import {
   orderBy, // Permet de demander le tri d'une requête query
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 
-// Cloud Storage : import des fonctions
-import {
-  getStorage, // Obtenir le Cloud Storage
-  ref, // Pour créer une référence à un fichier à uploader
-  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
-  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
-} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
-
 import bouton from "../../../components/bouton.vue";
 import boutonWarning from "../../../components/boutonWarning.vue";
 
@@ -45,7 +41,7 @@ export default {
   name: "CreateView",
   data() {
     return {
-      defi: {
+      defis: {
         //Le participant à créer
         libele: null, //Le libele du défi
       },
@@ -53,21 +49,18 @@ export default {
   },
 
   methods: {
-    async createDefi() {
-      // Obtenir storage Firebase
-      const storage = getStorage();
-      // Référence de l'image à uploader
-      const refStorage = ref(storage, "defis/" + this.defi.libele);
-      // Upload de l'image sur le Cloud Storage
-      await uploadString(refStorage, this.defi, "data_url").then((snapshot) => {
-        console.log("Uploaded a base64 string");
-
-        // Création du participant sur le Firestore
-        const db = getFirestore();
-        const docRef = addDoc(collection(db, "defis"), this.defi);
+    async createDefis() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection) document pays
+      const dbDefis = collection(firestore, "defis");
+      // On passe en paramètre format json
+      // les champs à mettre à jour
+      // Sauf le id qui est créé automatiquement
+      const docRef = await addDoc(dbDefis, {
+        libele: this.libele,
       });
-      // redirection sur la liste des participants
-      this.$router.push("/defis");
+      console.log("document créé avec le id : ", docRed.id);
     },
   },
 };

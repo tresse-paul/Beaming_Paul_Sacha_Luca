@@ -1,14 +1,14 @@
 <template>
   <HeaderSite />
   <div class="flex gap-28 px-5 pt-5">
-    <div class="flex w-full flex-col justify-center gap-20">
+    <div class="flex w-full flex-col justify-center gap-10">
       <h2 class="text-4xl font-bold">Se connecter</h2>
       <form @submit.prevent="onCnx" class="flex flex-col gap-8">
         <div class="font-barlow flex w-full flex-col gap-2">
           <p class="text-xl">Email</p>
           <input
             v-model="user.email"
-            class="h-8 flex-auto rounded-lg border border-gray-300 bg-gray-100 px-3 focus:ring-red-500"
+            class="h-8 flex-auto rounded-lg border border-gray-300 bg-gray-100 px-3 focus:ring-blue-350"
             type="email"
             required
             placeholder="abcd@mail.com"
@@ -18,7 +18,7 @@
           <p class="text-xl">Mot de passe</p>
           <input
             v-model="user.password"
-            class="h-8 flex-auto rounded-lg border border-gray-300 bg-gray-100 px-3 focus:ring-red-500"
+            class="h-8 flex-auto rounded-lg border border-gray-300 bg-gray-100 px-3 focus:ring-blue-350"
             :type="type"
             required
           />
@@ -27,7 +27,7 @@
         <div class="flex flex-col justify-between gap-7 md:flex md:flex-row">
           <button type="submit"><bouton principal class="flex w-full flex-1">Connexion</bouton></button>
           <button
-            class="flex justify-center rounded-full border-2 border-red-500 py-2 px-5 text-xl font-bold text-gray-900"
+            class="flex justify-center rounded-full border-2 border-red-500 py-2 px-5 text-xl font-bold text-red-500"
             @click="onDcnx()"
           >
             Deconnexion
