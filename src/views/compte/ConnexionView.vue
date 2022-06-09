@@ -26,12 +26,6 @@
         <div role="alert" class="rounded-lg bg-gray-100 p-3 text-center text-sm text-gray-900">{{ message }}</div>
         <div class="flex flex-col justify-between gap-7 md:flex md:flex-row">
           <button type="submit"><bouton principal class="flex w-full flex-1">Connexion</bouton></button>
-          <button
-            class="flex justify-center rounded-full border-2 border-red-500 py-2 px-5 text-xl font-bold text-red-500"
-            @click="onDcnx()"
-          >
-            Deconnexion
-          </button>
         </div>
       </form>
     </div>

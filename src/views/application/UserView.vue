@@ -2,13 +2,22 @@
   <HeaderApp />
   <main class="static grid grid-flow-row gap-5 overflow-y-auto px-4 pt-5 pb-28">
     <h2 class="text-3xl font-bold">Mon profil</h2>
-    <div class="flex flex-col items-center gap-10">
+    <div class="flex flex-col items-center justify-between gap-10">
       <div class="flex flex-col items-center gap-4">
         <p class="text-2xl font-bold">Paul Tresse</p>
       </div>
       <div class="flex flex-col items-center gap-4">
-        <bouton principal>Paramètres</bouton>
-        <boutonWarning>Déconexion</boutonWarning>
+        <RouterLink to="/personnalisation">
+          <bouton principal>Mon avatar</bouton>
+        </RouterLink>
+        <RouterLink to="/">
+          <boutonWarning @click="onDcnx()">Déconexion</boutonWarning>
+        </RouterLink>
+      </div>
+      <div class="flex items-end justify-center">
+        <RouterLink to="legale">
+          <p class="text-xs underline">Mes données</p>
+        </RouterLink>
       </div>
     </div>
   </main>
@@ -21,6 +30,15 @@
 </template>
 
 <script >
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+
+import { emitter } from "../../main.js";
+
 import HeaderApp from "../../components/HeaderApp.vue";
 import logo from "../../components/icons/logo.vue";
 import reward from "../../components/icons/reward.vue";
@@ -36,5 +54,35 @@ export default {
     bgcolor: String,
   },
   components: { HeaderApp, logo, reward, home, user, check, bouton, boutonWarning },
+
+  data() {
+    return {
+      user: {
+        email: "",
+        paswword: "",
+      },
+      message: null,
+      view: false,
+      type: "password",
+      imageData: null,
+    };
+  },
+
+  methods: {
+    onDcnx() {
+      signOut(getAuth())
+        .then((response) => {
+          this.message = "User non connecté";
+          this.user = {
+            email: null,
+            paswword: null,
+          };
+          emitter.emit("deConnectUser", { user: this.user });
+        })
+        .catch((error) => {
+          console.log("erreur déconnexion", error);
+        });
+    },
+  },
 };
 </script>

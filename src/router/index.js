@@ -10,6 +10,8 @@ import UserView from '../views/application/UserView.vue'
 import LegaleView from '../views/application/LegaleView.vue'
 import QuizzView from '../views/application/QuizzView.vue'
 
+import PersonnalisationView from '../views/application/parametres/PersonnalisationView.vue'
+
 import ConnexionView from '../views/compte/ConnexionView.vue'
 
 import CreateDefi from '../views/application/defis/CreateView.vue'
@@ -35,6 +37,9 @@ const router = createRouter({
     { path: '/legale', name: 'Legale', component: LegaleView },
     //Page du quizz culturel
     { path: '/quizz', name: 'Quizz', component: QuizzView, beforeEnter: guard },
+
+    //Personnalisation avatar
+    { path: '/personnalisation', name: 'Personnalisation', component: PersonnalisationView, beforeEnter: guard },
 
     //Les vues de création des défis
     //Page de création d'un défi
