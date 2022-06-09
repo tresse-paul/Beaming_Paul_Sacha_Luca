@@ -65,17 +65,6 @@ export default {
         // ses informations dans la 1° cellule du tableau : 0
         this.name = this.userInfo[0].login;
         this.isAdmin = this.userInfo[0].admin;
-        // Recherche de l'image du user sur le Storage
-        const storage = getStorage();
-        // Référence du fichier avec son nom
-        const spaceRef = ref(storage, "users/" + this.userInfo[0].avatar);
-        getDownloadURL(spaceRef)
-          .then((url) => {
-            this.avatar = url;
-          })
-          .catch((error) => {
-            console.log("erreur downloadUrl", error);
-          });
       });
     },
   },
