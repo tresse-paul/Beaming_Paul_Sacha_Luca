@@ -9,6 +9,8 @@ import ProgressionView from '../views/application/ProgressionView.vue'
 import UserView from '../views/application/UserView.vue'
 import LegaleView from '../views/application/LegaleView.vue'
 import QuizzView from '../views/application/QuizzView.vue'
+import FalseView from '../views/application/FalseView.vue'
+import TrueView from '../views/application/TrueView.vue'
 
 import PersonnalisationView from '../views/application/parametres/PersonnalisationView.vue'
 
@@ -37,6 +39,9 @@ const router = createRouter({
     { path: '/legale', name: 'Legale', component: LegaleView },
     //Page du quizz culturel
     { path: '/quizz', name: 'Quizz', component: QuizzView, beforeEnter: guard },
+    //Page de réponse fausse du quizz
+    { path: '/false', name: 'False', component: FalseView, beforeEnter: guard },
+    { path: '/true', name: 'True', component: TrueView, beforeEnter: guard },
 
     //Personnalisation avatar
     { path: '/personnalisation', name: 'Personnalisation', component: PersonnalisationView, beforeEnter: guard },
