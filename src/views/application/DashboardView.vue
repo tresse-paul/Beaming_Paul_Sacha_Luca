@@ -9,10 +9,8 @@
           <plus class="flex-none" />
         </RouterLink>
       </div>
-      <div class="relative flex flex-col gap-2">
-        <span class="flex h-2 w-full flex-auto rounded-full bg-gray-200"></span>
-        <span class="absolute top-0 left-0 flex h-2 w-2/4 flex-initial rounded-full bg-lime-450"></span>
-        <p class="flex justify-center text-xs">50 %</p>
+      <div class="progress h-2 w-full rounded-full bg-gray-200">
+        <div class="progress-inner h-full w-0 rounded-full bg-lime-450"></div>
       </div>
       <div v-for="defis in listeDefis" :key="defis.id" class="flex flex-col gap-5">
         <div class="flex flex-grow-0 items-center gap-5">
@@ -21,7 +19,11 @@
           </button>
           <p class="flex-grow text-base font-normal">{{ defis.libele }}</p>
           <label class="inline-flex items-center">
-            <input type="checkbox" class="h-6 w-6 flex-none rounded-full border border-gray-900 text-lime-450 focus:ring-0" />
+            <input
+              type="checkbox"
+              v-on:click="checkMe()"
+              class="myCheckBox h-6 w-6 flex-none rounded-full border border-gray-900 text-lime-450 focus:ring-0"
+            />
           </label>
         </div>
       </div>
@@ -39,7 +41,7 @@
     <!-- Block Quizz culturel -->
     <div class="flex flex-col gap-5 pt-5">
       <div class="flex items-baseline justify-between">
-        <h2 class="weight text-3xl font-bold">Défis bonus</h2>
+        <h2 class="weight text-3xl font-bold">Quizz culturel</h2>
       </div>
       <div class="flex flex-grow-0 items-center gap-5">
         <p class="flex-grow text-base font-normal">Répondez correctement à notre quizz culture et obtenez des Beamings.</p>
@@ -100,6 +102,21 @@ export default {
   },
 
   methods: {
+    async checkMe() {
+      const checkBoxes = document.querySelectorAll(".myCheckBox");
+      const progress = document.querySelector(".progress-inner");
+      const checklistProgressInterval = 100 / checkBoxes.length;
+      let width = 0;
+
+      for (let i = 0; i < checkBoxes.length; i++) {
+        if (checkBoxes[i].checked) {
+          width += checklistProgressInterval;
+        }
+      }
+
+      progress.style.width = `${width}%`;
+    },
+
     async getDefis() {
       const firestore = getFirestore();
       const dbDefis = collection(firestore, "defis");

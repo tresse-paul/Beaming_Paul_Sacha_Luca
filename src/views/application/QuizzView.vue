@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="flex justify-center">
-      <RouterLink to="/">
+      <RouterLink to="/dashboard">
         <bouton>Retour</bouton>
       </RouterLink>
     </div>
