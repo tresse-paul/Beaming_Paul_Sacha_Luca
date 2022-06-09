@@ -1,18 +1,24 @@
 <template>
   <HeaderApp />
-  <form class="static grid grid-flow-row gap-5 overflow-y-auto px-4 pt-5 pb-28" @submit.prevent="updtateUser">
+  <form class="static grid grid-flow-row gap-7 overflow-y-auto px-4 pt-5 pb-28" @submit.prevent="updtateUser">
     <h2 class="text-3xl font-bold">Mon photo</h2>
-    <div class="flex justify-center">
-      <span>
-        <img class="h-64 w-64 rounded-3xl object-cover" :src="user.avatar" />
-      </span>
-    </div>
-    <div class="flex flex-col items-center gap-2">
-      <label class="text-sm" for="file">Choisir un avatar</label>
-      <input type="file" @change="previewImage" />
-    </div>
-    <div class="flex flex-col items-center gap-4">
-      <button type="submit" class="font-barlow flex-auto rounded-lg bg-gray-200 px-4 py-2 text-xl hover:bg-gray-50">Modifier</button>
+    <div class="flex flex-col gap-20">
+      <div class="flex justify-center">
+        <span>
+          <img class="h-64 w-64 rounded-3xl object-cover" :src="user.avatar" />
+        </span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <label class="text-sm" for="file">Choisir un avatar</label>
+        <input type="file" @change="previewImage" />
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <button type="submit">
+          <RouterLink to="">
+            <bouton principal>Modifier</bouton>
+          </RouterLink>
+        </button>
+      </div>
     </div>
   </form>
 

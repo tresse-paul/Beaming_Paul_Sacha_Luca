@@ -6,6 +6,9 @@
       <div class="flex flex-col items-center gap-4">
         <p class="text-2xl font-bold">Paul Tresse</p>
       </div>
+      <div v-for="part in listePart" :id="part.id" :key="part.id">
+        <img class="h-64 w-64 object-cover" :src="part.avatar" />
+      </div>
       <div class="flex flex-col items-center gap-4">
         <RouterLink to="/personnalisation">
           <bouton principal>Mon avatar</bouton>
@@ -16,7 +19,7 @@
       </div>
       <div class="flex items-end justify-center">
         <RouterLink to="legale">
-          <p class="text-xs underline">Mes données</p>
+          <p class="text-xs underline">Mentions légales</p>
         </RouterLink>
       </div>
     </div>
@@ -30,6 +33,21 @@
 </template>
 
 <script >
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -50,13 +68,12 @@ import boutonWarning from "../../components/boutonWarning.vue";
 
 export default {
   name: "App",
-  props: {
-    bgcolor: String,
-  },
+
   components: { HeaderApp, logo, reward, home, user, check, bouton, boutonWarning },
 
   data() {
     return {
+      listePart: [],
       user: {
         email: "",
         paswword: "",
@@ -68,7 +85,40 @@ export default {
     };
   },
 
+  mounted() {
+    this.getUser();
+  },
+
   methods: {
+    async getUser() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document participant
+      const dbUser = collection(firestore, "users");
+      const q = query(dbUser, orderBy("avatar", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listePart = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        // Récupération des images de chaque participant
+        // parcours de la liste
+        this.listePart.forEach(function (personne) {
+          // Obtenir le Cloud Storage
+          const storage = getStorage();
+          // Récupération de l'image par son nom de fichier
+          const spaceRef = ref(storage, "users/" + personne.avatar);
+          // Récupération de l'url complète de l'image
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              // On remplace le nom du fichier
+              // Par l'url complète de la photo
+              personne.avatar = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+
     onDcnx() {
       signOut(getAuth())
         .then((response) => {
