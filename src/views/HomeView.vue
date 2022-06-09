@@ -25,10 +25,7 @@
         <div class="flex justify-center">
           <img class="h-28 w-28 object-contain" src="/src/assets/Trophe_3D.webp" alt="Trophé en 3D" />
         </div>
-        <p>
-          Avec Beaming, découvrez chaque jours de nouveaux objectifs à accomplir. Que ce soit les vôtres ou ceux que l’on vous propose,
-          faites-le pour vous pas pour les autres
-        </p>
+        <p class="mb-10">Avec Beaming, découvrez chaque jours de nouveaux objectifs à accomplir.</p>
       </div>
       <div class="flex flex-col gap-4">
         <h3 class="text-xl font-bold">Un accompagnement durable</h3>
@@ -43,22 +40,16 @@
       <h2 class="text-center text-2xl font-bold">
         Faites de vos <span class="inline h-1/2 w-auto bg-lime-450">objectifs</span> une habitude
       </h2>
-      <div class="flex flex-col gap-4">
+      <div class="mb-10 flex flex-col gap-4">
         <h3 class="text-xl font-bold">Combien de temps ?</h3>
-        <p>
-          Il faut en moyenne 66 jours, pour adopter une nouvelle habitude, mais pas de panique ! Ce résultat varie en fonction de vos
-          objectifs et de votre motivation.
-        </p>
+        <p>Il faut en moyenne 66 jours, pour adopter une nouvelle habitude, pas de panique !</p>
         <div class="flex justify-center">
           <img class="h-28 w-28 object-contain" src="/src/assets/Chronometre_3D.webp" alt="Chronomètre en 3D" />
         </div>
       </div>
       <div class="flex flex-col gap-4">
         <h3 class="text-xl font-bold">Quelle méthode adopter ?</h3>
-        <p>
-          Dans un premier temps, il est nécessaire d’identifier les raisons du changement, puis d’évaluer sa motivation et de réaliser
-          plusieurs objectifs simples pour atteindre le sommet.
-        </p>
+        <p>Identifier les raisons du changement, Évaluer sa motivation et réaliser plusieurs objectifs simples pour atteindre le sommet.</p>
         <div class="flex justify-center">
           <img class="h-28 w-28 object-contain" src="/src/assets/Puzzle_3D.webp" alt="Une pièce de puzzle en 3D" />
         </div>
@@ -67,6 +58,50 @@
     <div class="flex flex-col items-center gap-7 px-4">
       <CardAbo forfait="gratuit" prix="3.99 € / mois" :separation="true" />
     </div>
+    <div class="items-centers flex flex-col gap-5 bg-gray-100 px-4 py-5">
+      <h2 class="text-center text-2xl font-bold">Vous aves des questions ? C’est ici</h2>
+      <form class="flex flex-col gap-7">
+        <div class="flex flex-col gap-2">
+          <label for="Prenom">Prenom *</label>
+          <input class="rounded-lg" placeholder="Jean" type="text" required />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="Nom">Nom *</label>
+          <input class="rounded-lg" placeholder="Dupont" type="text" required />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="Email">Email *</label>
+          <input class="rounded-lg" placeholder="monadresse@email.com" type="email" required />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="textarea">Votre message *</label>
+          <textarea
+            class="rounded-lg"
+            placeholder="Ecrivez votre message juste ici..."
+            name="Textarea"
+            cols="30"
+            rows="5"
+            required
+          ></textarea>
+          <p class="text-xs">* Champs obligatoires</p>
+        </div>
+        <p class="text-center text-sm">
+          En cliquant sur envoyer, vous accepté nos <strong>conditions d’utilisations</strong> et notre
+          <strong>politique de confidentialité</strong>.
+        </p>
+        <button type="submit" class="flex justify-center">
+          <bouton class="">Envoyer</bouton>
+        </button>
+      </form>
+    </div>
+    <div class="items-centers flex flex-col gap-5 px-4">
+      <h2 class="text-center text-2xl font-bold">Rejoignez-nous des maintenant</h2>
+      <p class="text-center">Démarrez gratuitement, changez d’abonnement à tout moment</p>
+      <div class="flex justify-center">
+        <bouton principal>Inscription gratuite</bouton>
+      </div>
+    </div>
+    <Footer class="px-4" />
   </div>
 </template>
 
@@ -74,8 +109,9 @@
 import HeaderSite from "../components/HeaderSite.vue";
 import bouton from "../components/bouton.vue";
 import CardAbo from "../components/CardAbo.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
-  components: { HeaderSite, bouton, CardAbo },
+  components: { HeaderSite, bouton, CardAbo, Footer },
 };
 </script>

@@ -10,7 +10,7 @@
           <logo class="scale-150" />
         </div>
         <RouterLink to="/dashboard">
-          <bouton principal>Terminer</bouton>
+          <bouton>Terminer</bouton>
         </RouterLink>
       </div>
     </div>

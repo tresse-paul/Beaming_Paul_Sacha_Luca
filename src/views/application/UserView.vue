@@ -1,7 +1,7 @@
 <template>
   <HeaderApp />
   <main class="static grid grid-flow-row gap-5 overflow-y-auto px-4 pt-5 pb-28">
-    <h2 class="text-3xl font-bold">Mon profil</h2>
+    <h2 class="mb-16 text-3xl font-bold">Mon profil</h2>
     <div class="flex flex-col items-center justify-between gap-10">
       <div class="flex flex-col items-center gap-4">
         <p class="text-2xl font-bold">Paul Tresse</p>

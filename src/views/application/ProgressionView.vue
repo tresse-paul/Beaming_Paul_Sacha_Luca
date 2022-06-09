@@ -1,14 +1,11 @@
 <template>
   <HeaderApp />
-  <div class="flex h-full flex-col">
+  <div class="flex flex-col">
     <div class="static grid grid-flow-row gap-10 overflow-y-auto px-4 pt-5 pb-28">
       <h2 class="text-3xl font-bold">Ma progression</h2>
-      <div class="flex items-center gap-4">
+      <div class="mb-14 flex items-center gap-4">
         <reward class="h-10 w-auto fill-lime-450" />
         <p class="text-xl font-bold">Niveau 1</p>
-      </div>
-      <div class="flex justify-center">
-        <p class="text-2xl font-bold uppercase">Félicitation</p>
       </div>
       <div class="flex justify-center" v-for="part in listePart" :id="part.id" :key="part.id">
         <img class="h-64 w-64 object-cover" :src="part.avatar" />

@@ -2,10 +2,9 @@
   <HeaderApp />
   <main class="static grid grid-flow-row gap-5 overflow-y-auto px-4 pt-5 pb-28">
     <h2 class="text-3xl font-bold">Quizz culture</h2>
-    <p class="font-bold">
-      Une de ces affiramations est vraie, laquelle ? <br />
-      À la fin du film Fight Club...
-    </p>
+    <div class="flex flex-col gap-10">
+      <p class="text-xl font-bold">À la fin du film Fight Club...</p>
+    </div>
     <div class="flex flex-col gap-20">
       <div class="mt-5 flex flex-col justify-center gap-10">
         <div class="flex flex-grow-0 items-center gap-5">

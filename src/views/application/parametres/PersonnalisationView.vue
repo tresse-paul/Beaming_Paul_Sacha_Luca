@@ -14,8 +14,8 @@
       </div>
       <div class="flex flex-col items-center gap-4">
         <button type="submit">
-          <RouterLink to="">
-            <bouton principal>Modifier</bouton>
+          <RouterLink to="/user">
+            <bouton principal>Sauvegarder</bouton>
           </RouterLink>
         </button>
       </div>
