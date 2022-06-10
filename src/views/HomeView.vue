@@ -1,14 +1,10 @@
 <template>
   <HeaderSite />
-  <img
-    class="absolute -top-20 -z-10 h-auto w-screen object-cover"
-    src="/src/assets/world_emoticon.png"
-    alt="Vague d'émoji heureux et souriant"
-  />
+  <img class="h-28 w-screen object-cover" src="/src/assets/world_emoticon.png" alt="Vague d'émoji heureux et souriant" />
   <div class="flex flex-col gap-10">
-    <div class="mt-24 flex flex-col gap-7 px-4">
+    <div class="mt-10 flex flex-col gap-7 px-4">
       <h1 class="text-center font-outfit text-3xl font-bold">Devenez la meilleure version de vous-même</h1>
-      <p class="font-outfit">
+      <p class="text-center font-outfit">
         Réalisez vos objectifs et surpassez-vous quotidiennement avec <strong>Beaming</strong>. L’application web qui vous offre les clés de
         l’épanouissement, à votre rythme.
       </p>
@@ -36,7 +32,11 @@
         </div>
         <p>Vous n’êtes pas seul(e). Beaming vous accompagne tous les jours, n’importe où et n’importe quand. Ne baissez pas les bras !</p>
       </div>
-      <img class="absolute bottom-32 -z-10 object-contain" src="/src/assets/Serpentin_3D.webp" alt="Serpentin 3D traversant l'écran" />
+      <img
+        class="absolute bottom-32 -z-10 max-h-96 w-screen object-fill"
+        src="/src/assets/Serpentin_3D.webp"
+        alt="Serpentin 3D traversant l'écran"
+      />
     </div>
     <div class="flex flex-col items-center gap-7 px-4">
       <h2 class="text-center text-2xl font-bold">
