@@ -1,7 +1,7 @@
 <template>
   <HeaderSite />
   <div class="flex flex-col gap-10">
-    <div class="mt-24 flex flex-col gap-7 px-5">
+    <div class="mt-24 flex flex-col gap-7 px-4">
       <img
         class="absolute -top-24 left-0 -z-10 w-screen object-cover"
         src="/src/assets/world_emoticon.png"
