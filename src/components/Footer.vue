@@ -23,9 +23,14 @@
         <img class="h-32 w-32" src="../assets/Pouce_3D.webp" alt="Pouce en 3D" />
       </div>
     </div>
-    <RouterLink to="/legale">
-      <p class="flex justify-center text-xs underline">Mentions légales</p>
-    </RouterLink>
+    <div class="flex justify-center gap-5">
+      <RouterLink to="/legale">
+        <p class="flex justify-center text-xs underline">Mentions légales</p>
+      </RouterLink>
+      <RouterLink to="/cgu">
+        <p class="flex justify-center text-xs underline">Conditions d'utilisation</p>
+      </RouterLink>
+    </div>
   </div>
 </template>
 

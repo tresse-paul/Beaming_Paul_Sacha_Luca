@@ -33,8 +33,26 @@
           <p>Numéro de l’entreprise : <a class="underline" href="tel:+33 (0)3 81 99 47 34">+33 (0)3 81 99 47 34</a></p>
         </div>
       </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="font-bold">Propriété intellectuelle des illustrations du site :</h3>
+        <p>Sacha WICKY, vijay verma [@realvjy], Freepik</p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="font-bold">Rédacteur en chef :</h3>
+        <p>Luca THOMESSE</p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="font-bold">Mentions relatives à l’hébergeur du site :</h3>
+        <div>
+          <p>Infomaniak</p>
+          <p>Dénomination sociale : Infomaniak Entertainment</p>
+          <p>Adresse siège sociale : Rue Eugène-Marziano 25 1227 Les Acacias Suisse</p>
+          <p>Fax : Fax +41 844551156</p>
+        </div>
+      </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script >
@@ -43,9 +61,10 @@ import check from "../../components/icons/check.vue";
 import home from "../../components/icons/home.vue";
 import reward from "../../components/icons/reward.vue";
 import user from "../../components/icons/user.vue";
+import Footer from "../../components/Footer.vue";
 
 export default {
   name: "App",
-  components: { HeaderApp, check, home, reward, user },
+  components: { HeaderApp, check, home, reward, user, Footer },
 };
 </script>

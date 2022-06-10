@@ -8,6 +8,7 @@ import DefisView from '../views/application/DefisView.vue'
 import ProgressionView from '../views/application/ProgressionView.vue'
 import UserView from '../views/application/UserView.vue'
 import LegaleView from '../views/application/LegaleView.vue'
+import CguView from '../views/application/CguView.vue'
 import QuizzView from '../views/application/QuizzView.vue'
 import FalseView from '../views/application/FalseView.vue'
 import TrueView from '../views/application/TrueView.vue'
@@ -37,8 +38,9 @@ const router = createRouter({
     { path: '/progression', name: 'Progression', component: ProgressionView, beforeEnter: guard },
     //Page de profil utilisateur
     { path: '/user', name: 'User', component: UserView, beforeEnter: guard },
-    //Page des mentions légales
+    //Page des mentions légales et CGU
     { path: '/legale', name: 'Legale', component: LegaleView },
+    { path: '/cgu', name: 'Cgu', component: CguView },
     //Page du quizz culturel
     { path: '/quizz', name: 'Quizz', component: QuizzView, beforeEnter: guard },
     //Page de réponse fausse du quizz

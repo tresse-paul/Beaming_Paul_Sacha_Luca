@@ -17,9 +17,12 @@
           <boutonWarning @click="onDcnx()">Déconexion</boutonWarning>
         </RouterLink>
       </div>
-      <div class="flex items-end justify-center">
+      <div class="flex justify-center gap-5">
         <RouterLink to="legale">
           <p class="text-xs underline">Mentions légales</p>
+        </RouterLink>
+        <RouterLink to="Cgu">
+          <p class="text-xs underline">Conditions d'utilisation</p>
         </RouterLink>
       </div>
     </div>
