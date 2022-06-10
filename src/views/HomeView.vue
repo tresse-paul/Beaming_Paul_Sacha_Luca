@@ -305,7 +305,7 @@
         </RouterLink>
       </div>
     </div>
-    <Footer class="px-4" />
+    <Footer />
   </div>
 </template>
 

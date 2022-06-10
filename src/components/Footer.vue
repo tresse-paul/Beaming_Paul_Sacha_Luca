@@ -5,23 +5,27 @@
       <p class="w-3/4 text-center text-gray-400">Nos sources proviennent de diverses recherches menées par l’University College London</p>
     </div>
     <div class="mb-10 flex flex-col gap-5">
-      <h5 class="font-bold uppercase">nous suivres</h5>
-      <div class="flex gap-5">
-        <a href="https://www.facebook.com/">
-          <facebook class="scale-125" />
-        </a>
-        <a href="https://www.instagram.com/">
-          <instagram class="scale-125" />
-        </a>
-        <a href="https://twitter.com/">
-          <twitter class="scale-125" />
-        </a>
+      <div class="flex justify-between">
+        <div class="flex flex-col gap-3 px-4">
+          <h5 class="font-bold uppercase">nous suivres</h5>
+          <div class="flex gap-6">
+            <a href="https://www.facebook.com/">
+              <facebook class="scale-125" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <instagram class="scale-125" />
+            </a>
+            <a href="https://twitter.com/">
+              <twitter class="scale-125" />
+            </a>
+          </div>
+        </div>
+        <img class="h-32 w-32" src="../assets/Pouce_3D.webp" alt="Pouce en 3D" />
       </div>
     </div>
     <RouterLink to="/legale">
       <p class="flex justify-center text-xs underline">Mentions légales</p>
     </RouterLink>
-    <img class="absolute left-28 -bottom-16 z-10 scale-50" src="../assets/Pouce_3D.webp" alt="Pouce en 3D" />
   </div>
 </template>
 
