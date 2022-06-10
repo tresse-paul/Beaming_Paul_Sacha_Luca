@@ -58,6 +58,30 @@
     <div class="flex flex-col items-center gap-7 px-4">
       <CardAbo forfait="gratuit" prix="3.99 € / mois" :separation="true" />
     </div>
+    <div class="flex flex-col gap-7 px-4">
+      <h2 class="text-center text-2xl font-bold"><span class="inline h-1/2 w-auto bg-blue-350">Qui</span> somme-nous ?</h2>
+      <div class="flex flex-col items-center justify-center">
+        <img class="scale-75" src="../assets/Sacha.svg" alt="" />
+        <div class="flex flex-col gap-3">
+          <h3 class="text-center text-xl">Sacha <span class="inline font-bold uppercase">Wicky</span></h3>
+          <p>Étudiant en 1er année de B.U.T MMI à Montbéliard. Graphiste chargé du design et de l’identité visuelle de Beaming.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <img class="scale-75" src="../assets/Luca.svg" alt="" />
+        <div class="flex flex-col gap-3">
+          <h3 class="text-center text-xl">Luca <span class="inline font-bold uppercase">Thomesse</span></h3>
+          <p>Étudiant en 1er année de B.U.T MMI à Montbéliard. Communicant de Beaming, chargé du contenu textuel et des mentions légales</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="scale-75" src="../assets/Paul.png" alt="" />
+        <div class="flex flex-col gap-3">
+          <h3 class="text-center text-xl">Paul <span class="inline font-bold uppercase">Tresse</span></h3>
+          <p>Étudiant en 1er année de B.U.T MMI à Montbéliard. Développeur front end de l’équipe Beaming</p>
+        </div>
+      </div>
+    </div>
     <div class="items-centers flex flex-col gap-5 bg-gray-100 px-4 py-5">
       <h2 class="text-center text-2xl font-bold">Vous aves des questions ? C’est ici</h2>
       <form class="flex flex-col gap-7">
