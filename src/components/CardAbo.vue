@@ -4,6 +4,7 @@
     <p>{{ prix }}</p>
     <span :class="{ 'block bg-blue-350 ': separation }" class="block h-0.5 w-full bg-black"></span>
     <p class="text-xl">Disposez de</p>
+    <div></div>
   </div>
 </template>
 

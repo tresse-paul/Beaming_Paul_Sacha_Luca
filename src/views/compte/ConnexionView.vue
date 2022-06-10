@@ -24,6 +24,7 @@
           />
         </div>
         <div role="alert" class="rounded-lg bg-gray-100 p-3 text-center text-sm text-gray-900">{{ message }}</div>
+        <p>Vous n'avez pas de compte ? <RouterLink to="/inscription" class="font-bold">Inscrivez-vous ici</RouterLink></p>
         <div class="flex flex-col justify-between gap-7 md:flex md:flex-row">
           <button type="submit"><bouton principal class="flex w-full flex-1">Connexion</bouton></button>
         </div>

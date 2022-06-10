@@ -4,7 +4,7 @@
     <h2 class="mb-16 text-3xl font-bold">Mon profil</h2>
     <div class="flex flex-col items-center justify-between gap-10">
       <div class="flex flex-col items-center gap-4">
-        <p class="text-2xl font-bold">Paul Tresse</p>
+        <p class="text-2xl font-bold">User</p>
       </div>
       <div v-for="part in listePart" :id="part.id" :key="part.id">
         <img class="h-64 w-64 object-cover" :src="part.avatar" />

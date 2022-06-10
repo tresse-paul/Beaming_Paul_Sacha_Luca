@@ -15,6 +15,7 @@ import TrueView from '../views/application/TrueView.vue'
 import PersonnalisationView from '../views/application/parametres/PersonnalisationView.vue'
 
 import ConnexionView from '../views/compte/ConnexionView.vue'
+import InscriptionView from '../views/compte/InscriptionView.vue'
 
 import CreateDefi from '../views/application/defis/CreateView.vue'
 
@@ -25,6 +26,7 @@ const router = createRouter({
     { path: '/', name: 'HomeView', component: HomeView },
     //Page de connexion
     { path: '/connexion', name: 'Connexion', component: ConnexionView },
+    { path: '/inscription', name: 'Inscription', component: InscriptionView },
 
     //Application mobile accès admin
     //Accueil application

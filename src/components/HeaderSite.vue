@@ -16,7 +16,11 @@
       <li>
         <RouterLink to="/connexion"><bouton class="flex">Connexion</bouton></RouterLink>
       </li>
-      <li><bouton principal>Inscription</bouton></li>
+      <li>
+        <RouterLink to="/inscription">
+          <bouton principal>Inscription</bouton>
+        </RouterLink>
+      </li>
     </div>
   </ul>
 </template>
